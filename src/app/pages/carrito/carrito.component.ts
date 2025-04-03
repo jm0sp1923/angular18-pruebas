@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { HeaderService } from '../../core/services/header.service';
 
 @Component({
   selector: 'app-carrito',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.css'
 })
-export class CarritoComponent {
-
+export class CarritoComponent{
+    ngOnInit(): void {
+      this.headerServices.titulo.set ('Carrito');
+    }
+  
+     headerServices = inject(HeaderService);
 }

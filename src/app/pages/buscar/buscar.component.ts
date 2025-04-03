@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HeaderService } from '../../core/services/header.service';
 
 @Component({
   selector: 'app-buscar',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './buscar.component.css'
 })
 export class BuscarComponent {
-
+    ngOnInit(): void {
+      this.headerServices.titulo.set ('Buscar');
+    }
+  
+     headerServices = inject(HeaderService);
 }
