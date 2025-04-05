@@ -1,0 +1,74 @@
+#container {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    max-width: 600px;
+    margin: 10px auto;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+  
+  #foto {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  h4 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  ul li {
+    background-color: #e3f2fd;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #1976d2;
+  }
+  
+  #precio {
+    font-weight: bold;
+    color: #388e3c;
+    text-align: right;
+    margin-top: auto;
+    font-size: 1.1rem;
+  }
+  
+  #tarjeta-articulo {
+    margin: 20px auto;
+    max-width: 700px;
+  }
+  

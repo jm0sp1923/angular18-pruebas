@@ -1,1 +1,7 @@
-<p>rubro works!</p>
+<app-tarjeta-articulo  id="tarjeta-articulo"
+ *ngFor="let producto of productos"
+ [producto]="producto"
+ [routerLink]="['/articulo', producto.id]"
+ >
+
+</app-tarjeta-articulo>

@@ -16,12 +16,12 @@ export const routes: Routes = [
         component: BuscarComponent
     },
     {
-        path: 'rubro',
+        path: 'categoria/:id',
         component: RubroComponent
     }
     ,
     {
-        path: 'articulo',
+        path: 'articulo/:id',
         component: ArticuloComponent
     },
     {

@@ -9,3 +9,6 @@ export class HeaderService {
   titulo = signal ('');
   extendido = signal (false);
 }
+
+
+

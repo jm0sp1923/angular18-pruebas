@@ -1,0 +1,16 @@
+<div id="container">
+  <div
+    id="foto"
+    [ngStyle]="{ 'background-image': 'url(' + producto.fotoUrl + ')' }"
+  ></div>
+  <div class="contenido">
+    <h4>{{ producto.nombre }}</h4>
+    <ul>
+      <li *ngFor="let ingrediente of producto.ingredientes">
+        <span class="material-symbols-outlined"></span>
+        {{ ingrediente }}
+      </li>
+    </ul>
+    <p id="precio">${{ producto.precio }}</p>
+  </div>
+</div>

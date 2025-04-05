@@ -1,1 +1,59 @@
-<p>articulo works!</p>
+<div class="producto-container">
+
+  <!-- Imagen principal del producto -->
+  <img id="img-producto"
+    [src]="producto?.fotoUrl"
+    [alt]="producto?.nombre"
+    class="img-fluid"
+  />
+
+  <!-- Lista de ingredientes -->
+  <p>ingredientes</p><br>
+  <ul class="ingredientes-list">
+    <li *ngFor="let ingrediente of producto?.ingredientes">
+      {{ ingrediente }}
+    </li>
+  </ul>
+
+  <div *ngIf="producto?.esCeliaco" class="alert-icono">
+    <img class="icono" src="/icons/food-dinner-svgrepo-com.svg" alt="Ícono celiaco" />
+    <p>Apto para celíaco</p>
+  </div>
+  
+
+  <!-- Apto para veganos -->
+  <div *ngIf="producto?.esVegano" class="alert-icono">
+    <img class="icono" src="/icons/food-dinner-svgrepo-com.svg" alt="Ícono celiaco" />
+    <p>Apto para vegano</p>
+  </div>
+
+  <!-- Campo de notas -->
+  <div class="campo mb-3">
+    <label for="notas" class="form-label">Notas de la orden</label>
+    <textarea
+      id="notas"
+      name="notas"
+      rows="4"
+      class="form-control notas"
+      placeholder="Notas..."
+    ></textarea>
+  </div>
+
+  <!-- Campo de cantidad -->
+  <div class="campo mb-4">
+    <label for="cantidad" class="form-label">Cantidad</label>
+    <input
+      type="number"
+      id="cantidad"
+      name="cantidad"
+      class="form-control cantidad"
+      min="1"
+      value="1"
+    />
+  </div>
+
+  <!-- Botón -->
+  <button class="btn-ordenar">
+    ORDENAR
+  </button>
+</div>
